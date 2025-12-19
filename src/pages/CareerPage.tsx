@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext';
-import { MOCK_USER } from '../../lib/mockData';
-import { Timeline } from '../../components/features/career/Timeline';
-import { ResumeView } from '../../components/features/career/ResumeView';
-import { Button } from '../../components/ui/Button';
+import { useLanguage } from '../context/LanguageContext';
+import { MOCK_USER } from '../lib/mockData';
+import { Timeline } from '../components/features/career/Timeline';
+import { ResumeView } from '../components/features/career/ResumeView';
+import { Button } from '../components/ui/Button';
 import { FileText } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
