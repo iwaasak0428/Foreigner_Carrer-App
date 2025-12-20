@@ -1,4 +1,4 @@
-import { Home, Briefcase, CreditCard, Search, Settings } from 'lucide-react';
+import { Home, Briefcase, Wallet, Heart, Menu } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 import { useLanguage } from '../../context/LanguageContext';
@@ -10,9 +10,9 @@ export function BottomNav() {
     const navItems = [
         { path: '/', icon: Home, label: t('nav.home') },
         { path: '/career', icon: Briefcase, label: t('nav.career') },
-        { path: '/credit', icon: CreditCard, label: t('nav.credit') },
-        { path: '/jobs', icon: Search, label: t('nav.jobs') },
-        { path: '/settings', icon: Settings, label: t('nav.settings') },
+        { path: '/finance', icon: Wallet, label: t('nav.finance') },
+        { path: '/life', icon: Heart, label: t('nav.life') },
+        { path: '/menu', icon: Menu, label: t('nav.menu') },
     ];
 
     return (

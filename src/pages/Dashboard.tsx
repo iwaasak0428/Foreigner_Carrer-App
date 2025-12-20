@@ -3,7 +3,7 @@ import { MOCK_USER } from '../lib/mockData';
 import { ScoreCircle } from '../components/features/credit/ScoreCircle';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import { Building } from 'lucide-react';
+import { Building, User } from 'lucide-react';
 
 export default function Dashboard() {
     const { t } = useLanguage();
@@ -13,11 +13,9 @@ export default function Dashboard() {
         <div className="p-6 space-y-8 pb-24">
             {/* Header */}
             <div className="flex items-center space-x-4">
-                <img
-                    src={user.avatarUrl}
-                    alt={user.name}
-                    className="w-16 h-16 rounded-full border-2 border-primary object-cover"
-                />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary border-2 border-primary/20">
+                    <User className="w-8 h-8" />
+                </div>
                 <div>
                     <p className="text-sm text-muted-foreground">{t('dashboard.welcome')}</p>
                     <h1 className="text-2xl font-bold">{user.name}</h1>
@@ -69,18 +67,6 @@ export default function Dashboard() {
                             </div>
                         </div>
                     ))}
-                </Card>
-            </div>
-
-            {/* Quick Stats / Info */}
-            <div className="grid grid-cols-2 gap-4">
-                <Card className="p-4 space-y-2">
-                    <p className="text-xs text-muted-foreground">Visa Expiry</p>
-                    <p className="font-mono font-bold">{user.visaExpiry}</p>
-                </Card>
-                <Card className="p-4 space-y-2">
-                    <p className="text-xs text-muted-foreground">Nationality</p>
-                    <p className="font-medium">{user.nationality}</p>
                 </Card>
             </div>
         </div>
